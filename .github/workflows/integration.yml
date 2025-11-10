@@ -47,5 +47,5 @@ jobs:
     - name: "Installing Dependencies"
       run: npm i
 
-    - name: "Running test cases"
+    - name: "Running test cases for Git Actions"
       run: npm run test
