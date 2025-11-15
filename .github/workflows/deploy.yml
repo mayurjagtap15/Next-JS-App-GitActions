@@ -12,19 +12,18 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v4
 
-    - name: List and Cat file in Repo
-      run: |
-        echo "My first GitHub Action"
-        ls
-        cat README.md
+  #  - name: List and Cat file in Repo
+  #    run: |
+  #      echo "My first GitHub Action"
+  #      ls
+  #      cat README.md
       
     #- name: List Files
     #  run: ls
       
     #- name: Read Files
     #  run: cat README.md  
-
-    - name: Generate ASCII Artwork
-      run: cowsay -f dragon "Run for cover,I am Dragon" >> dragon.txt
+    - name: Executing shell Script
+      run: ./shellscript.sh
 
   
