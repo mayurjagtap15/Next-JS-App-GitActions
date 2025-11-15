@@ -24,6 +24,8 @@ jobs:
     #- name: Read Files
     #  run: cat README.md  
     - name: Executing shell Script
-      run: ./shellscript.sh
+      run: |
+        chmod +x
+        ./shellscript.sh
 
   
