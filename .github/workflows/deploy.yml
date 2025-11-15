@@ -1,18 +1,24 @@
 
-name: Deploy
+name: My WorkFlow
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  deploy:
-
+  first_job:
     runs-on: ubuntu-latest
-
-
     steps:
-    - uses: actions/checkout@v4
-    - run: docker build . -t harishneel/next-js-app
-    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin 
-    - run: docker push harishneel/next-js-app:latest
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: Welcome Message
+      run: echo "My first GitHub Action"
+      
+    - name: List Files
+      run: ls
+      
+    - name: Read Files
+      run: cat README.md  
+
+  
