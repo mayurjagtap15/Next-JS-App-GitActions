@@ -23,7 +23,7 @@ jobs:
       
     #- name: Read Files
     #  run: cat README.md  
-    - name: Executing shell Script
+    - name: Executing shell Script for Test
       run: |
         chmod +x shellscript.sh
         ./shellscript.sh
